@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const accountRoutes = require('./routes/accounts');
 const bankRoutes = require('./routes/bank');
+const userRoutes = require('./routes/user');
 
 const mongoose = require('mongoose');
 
@@ -15,6 +16,7 @@ server.use(bodyParser.json());
 // routes
 server.use(accountRoutes);
 server.use(bankRoutes);
+server.use(userRoutes)
 
 
 //connect to database and start server
